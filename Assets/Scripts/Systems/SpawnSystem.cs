@@ -14,9 +14,10 @@ public class SpawnSystem
                 var pos = spawner.Position;
                 if (!IsOccupied(pos, board))
                 {
+                    var kind = spawner.SpawnerConfig.GenerateItem(board);
                     var item = new Item
                     {
-                        Config = board.ItemKinds[Random.Range(0, board.ItemKinds.Count)],
+                        Config = kind,
                         Position = pos,
                     };
 

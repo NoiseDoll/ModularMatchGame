@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ItemKind", menuName = "MatchGame/ItemKind")]
-public class ItemKind : ViewConfig
+[CreateAssetMenu(fileName = "New Marble", menuName = "MatchGame/Marble")]
+public class MarbleConfig : ItemConfig
 {
     public string Name;
     public Color Color;

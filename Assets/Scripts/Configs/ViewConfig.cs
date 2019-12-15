@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New View", menuName = "MatchGame/View")]
-public class ViewConfig : ScriptableObject
+[CreateAssetMenu(fileName = "New Element", menuName = "MatchGame/Element")]
+public class ElementConfig : ScriptableObject
 {
     public GameObject View;
 }

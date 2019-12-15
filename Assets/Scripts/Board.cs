@@ -8,7 +8,7 @@ public class Board
     public int Width;
     public int Height;
 
-    public List<ItemKind> ItemKinds;
+    public List<MarbleConfig> ItemKinds;
 
     public Cell[,] Cells;
     public Spawner[,] Spawners;
@@ -24,7 +24,7 @@ public class Board
         Spawners = new Spawner[width, height];
         Items = new Item[width, height];
 
-        ItemKinds = new List<ItemKind>();
+        ItemKinds = new List<MarbleConfig>();
 
         CommandQueue = new Queue<BoardCommand>();
     }
@@ -89,7 +89,7 @@ public class Board
 public class BoardElement
 {
     public Vector2Int Position;
-    public ViewConfig Config;
+    public ElementConfig Config;
 }
 
 public class Cell : BoardElement
@@ -98,11 +98,12 @@ public class Cell : BoardElement
 
 public class Spawner : BoardElement
 {
+    public SpawnerConfig SpawnerConfig => Config as SpawnerConfig;
 }
 
 public class Item : BoardElement
 {
-    public ItemKind Kind => Config as ItemKind;
+    public ItemConfig Kind => Config as ItemConfig;
 }
 
 public class BoardCommand

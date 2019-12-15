@@ -5,9 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Asset Manager", menuName = "MatchGame/AssetManager")]
 public class MatchAssetManager : ScriptableObject
 {
-    public ViewConfig[] Assets;
+    public ElementConfig[] Assets;
 
-    public ViewConfig GetAsset(string name)
+    public ElementConfig GetAsset(string name)
     {
         // TODO: Obviously cache this into dictionary
         foreach (var asset in Assets)

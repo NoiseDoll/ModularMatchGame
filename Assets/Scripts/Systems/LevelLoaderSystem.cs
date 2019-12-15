@@ -13,13 +13,14 @@ public class LevelLoaderSystem
 
     public void Execute(Board board)
     {
-        var cellConfig = assetManager.GetAsset("CellView");
-        var spawnerConfig = assetManager.GetAsset("SpawnerView");
+        var cellConfig = assetManager.GetAsset("Cell");
+        var marbleSpawner = assetManager.GetAsset("MarbleSpawner");
+        var bonusSpawner = assetManager.GetAsset("BonusSpawner");
 
         board.Create(4, 4);
 
-        board.ItemKinds.Add((ItemKind)assetManager.GetAsset("Marble1"));
-        board.ItemKinds.Add((ItemKind)assetManager.GetAsset("Marble2"));
+        board.ItemKinds.Add((MarbleConfig)assetManager.GetAsset("Marble1"));
+        board.ItemKinds.Add((MarbleConfig)assetManager.GetAsset("Marble2"));
 
         for (int y = 0; y < board.Height; y++)
         {
@@ -34,15 +35,22 @@ public class LevelLoaderSystem
             }
         }
 
-        for (int x = 0; x < board.Width; x++)
+        for (int x = 0; x < board.Width - 1; x++)
         {
             var spawner = new Spawner
             {
-                Config = spawnerConfig,
+                Config = marbleSpawner,
                 Position = new Vector2Int(x, 0),
             };
 
             board.SpawnSpawner(spawner);
         }
+
+        var spawner2 = new Spawner
+        {
+            Config = bonusSpawner,
+            Position = new Vector2Int(board.Width - 1, 0),
+        };
+        board.SpawnSpawner(spawner2);
     }
 }

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4efb15d717d42d84faf8b734aa2abbe2, type: 3}
-  m_Name: CellView
+  m_Script: {fileID: 11500000, guid: b8ed90015b9fd514a909f717d625469b, type: 3}
+  m_Name: EvoBomb
   m_EditorClassIdentifier: 
-  View: {fileID: 8281416630405570673, guid: 93f679a3b9c61404081d7327a9a4c129, type: 3}
+  View: {fileID: 7616964224402526990, guid: d9a0fc465f401f24a9716bc788dc8eda, type: 3}
