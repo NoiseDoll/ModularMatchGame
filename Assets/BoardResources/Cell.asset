@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Cell
   m_EditorClassIdentifier: Assembly-CSharp::ElementConfig
-  View: {fileID: 0}
+  View: {fileID: 8281416630405570673, guid: 93f679a3b9c61404081d7327a9a4c129, type: 3}

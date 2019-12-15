@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53471c4ee5569e74baa92899060f6f73, type: 3}
   m_Name: BonusSpawner
   m_EditorClassIdentifier: 
-  View: {fileID: 0}
-  Bonus: {fileID: 0}
+  View: {fileID: 5238757189821489253, guid: 63b84ac5942774f4796532629b3daf5c, type: 3}
+  Bonus: {fileID: 11400000, guid: 20c86eb9c0d6e4748916fd85b9e3b267, type: 2}

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1556cebc87e84b4fa3fa621bb025d06, type: 3}
-  m_Name: MarbleSpawner
+  m_Script: {fileID: 11500000, guid: ee9c0a3029d88dc41a87be77a7a87f82, type: 3}
+  m_Name: Box
   m_EditorClassIdentifier: 
-  View: {fileID: 5238757189821489253, guid: 63b84ac5942774f4796532629b3daf5c, type: 3}
+  View: {fileID: 204092080456879519, guid: 1778b0cd6bb298248a6d0baa4c3733f0, type: 3}
