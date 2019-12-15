@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb34449069cd3c418e28279c6d646cd, type: 3}
+  m_Name: Marble1
+  m_EditorClassIdentifier: 
+  View: {fileID: 844536805686186497, guid: f4d7d3776f2461c45a09af5049320c0d, type: 3}
+  Name: Frog
+  Color: {r: 0.030037368, g: 0.7075472, b: 0.04711361, a: 0}
