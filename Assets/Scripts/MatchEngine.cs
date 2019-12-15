@@ -9,13 +9,15 @@ public class MatchEngine : MonoBehaviour
     public InputPanel inputPanel;
     public Camera cam;
 
+    [Header("Systems")]
+    public InputSystem input;
+
     private Board board;
 
     private LevelLoaderSystem loader;
     private SpawnSystem spawner;
     private MoveItemsSystem mover;
     private VisualizerSystem visualizer;
-    private ClickSystem remover;
 
 
     void Awake()
@@ -24,7 +26,6 @@ public class MatchEngine : MonoBehaviour
         loader = new LevelLoaderSystem(assetManager);
         spawner = new SpawnSystem();
         mover = new MoveItemsSystem();
-        remover = new ClickSystem();
 
         visualizer = new VisualizerSystem();
 
@@ -45,7 +46,7 @@ public class MatchEngine : MonoBehaviour
     private void InputPanel_Clicked(UnityEngine.EventSystems.PointerEventData obj)
     {
         var worldPoint = cam.ScreenToWorldPoint(obj.position);
-        remover.Execute(board, worldPoint);
+        input.Execute(board, worldPoint);
         MainLoop();
 
     }

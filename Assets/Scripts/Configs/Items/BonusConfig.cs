@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Bonus", menuName = "MatchGame/Bonus")]
+[CreateAssetMenu(fileName = "New Bonus", menuName = "MatchGame/Items/Bonus")]
 public class BonusConfig : ItemConfig
 {
     public override void Click(Board board, Item item)

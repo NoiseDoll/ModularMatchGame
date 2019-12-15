@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Marble", menuName = "MatchGame/Marble")]
+[CreateAssetMenu(fileName = "New Marble", menuName = "MatchGame/Items/Marble")]
 public class MarbleConfig : ItemConfig
 {
     public string Name;

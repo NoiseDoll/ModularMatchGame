@@ -72,6 +72,30 @@ public class Board
         CommandQueue.Enqueue(command);
     }
 
+    public void SwapItems(Item item1, Item item2)
+    {
+        var pos1 = item1.Position;
+        var pos2 = item2.Position;
+        item1.Position = pos2;
+        item2.Position = pos1;
+
+        Items[pos2.x, pos2.y] = item1;
+        Items[pos1.x, pos1.y] = item2;
+
+        var command = new BoardCommand
+        {
+            Operation = "Move",
+            Element = item1,
+        };
+        CommandQueue.Enqueue(command);
+        command = new BoardCommand
+        {
+            Operation = "Move",
+            Element = item2,
+        };
+        CommandQueue.Enqueue(command);
+    }
+
     public void DespawnItem(Vector2Int pos)
     {
         var item = Items[pos.x, pos.y];

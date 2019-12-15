@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClickSystem
+[CreateAssetMenu(fileName = "Click System", menuName = "MatchGame/Systems/Input/Click System")]
+public class ClickSystem : InputSystem
 {
-    public void Execute(Board board, Vector3 worldPoint)
+    public override void Execute(Board board, Vector3 worldPoint)
     {
         var point = InverseTransform(board, worldPoint);
 

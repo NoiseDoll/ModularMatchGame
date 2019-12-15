@@ -152,6 +152,7 @@ MonoBehaviour:
   assetManager: {fileID: 11400000, guid: 7f9078f211e5b1f428aed5d0c12d202d, type: 2}
   inputPanel: {fileID: 104115417}
   cam: {fileID: 519420031}
+  input: {fileID: 11400000, guid: b510d6af5d1ea8148a3f9c8e818538ff, type: 2}
 --- !u!4 &95695553
 Transform:
   m_ObjectHideFlags: 0
