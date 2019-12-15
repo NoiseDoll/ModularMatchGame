@@ -15,7 +15,7 @@ public class MatchEngine : MonoBehaviour
     private SpawnSystem spawner;
     private MoveItemsSystem mover;
     private VisualizerSystem visualizer;
-    private ClickRemoveSystem remover;
+    private ClickSystem remover;
 
 
     void Awake()
@@ -24,7 +24,7 @@ public class MatchEngine : MonoBehaviour
         loader = new LevelLoaderSystem(assetManager);
         spawner = new SpawnSystem();
         mover = new MoveItemsSystem();
-        remover = new ClickRemoveSystem();
+        remover = new ClickSystem();
 
         visualizer = new VisualizerSystem();
 

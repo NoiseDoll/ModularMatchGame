@@ -7,4 +7,9 @@ public class MarbleConfig : ItemConfig
 {
     public string Name;
     public Color Color;
+
+    public override void Click(Board board, Item item)
+    {
+        board.DespawnItem(item.Position);
+    }
 }

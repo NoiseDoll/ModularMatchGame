@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemConfig : ElementConfig
+public abstract class ItemConfig : ElementConfig
 {
+    public abstract void Click(Board board, Item item);
 }

@@ -84,6 +84,11 @@ public class Board
         };
         CommandQueue.Enqueue(command);
     }
+
+    public bool IsInBounds(Vector2Int position)
+    {
+        return position.x >= 0 && position.x < Width && position.y >= 0 && position.y < Height;
+    }
 }
 
 public class BoardElement

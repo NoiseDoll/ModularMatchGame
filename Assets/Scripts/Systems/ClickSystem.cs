@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClickRemoveSystem
+public class ClickSystem
 {
     public void Execute(Board board, Vector3 worldPoint)
     {
         var point = InverseTransform(board, worldPoint);
 
-        if (IsInBounds(board, point))
+        if (board.IsInBounds(point))
         {
-            board.DespawnItem(point);
+            var item = board.Items[point.x, point.y];
+            item.Kind.Click(board, item);
         }
     }
 
@@ -20,10 +21,5 @@ public class ClickRemoveSystem
         var y = (int)(-position.y + board.Height / 2f);
 
         return new Vector2Int(x, y);
-    }
-
-    private bool IsInBounds(Board board, Vector2Int position)
-    {
-        return position.x >= 0 && position.x < board.Width && position.y >= 0 && position.y < board.Height;
     }
 }
