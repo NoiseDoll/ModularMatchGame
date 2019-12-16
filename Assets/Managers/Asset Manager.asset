@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Asset Manager
   m_EditorClassIdentifier: 
   Assets:
-  - {fileID: 11400000, guid: b3818912eb3ed9d43ab0c93254a8058f, type: 2}
+  - {fileID: 11400000, guid: 55a3498be89617a4298da6acef41e084, type: 2}
   - {fileID: 11400000, guid: 623b671e6c80179449a065f807c3759d, type: 2}
   - {fileID: 11400000, guid: 1748e6cbb2e809d4e9ce2704f4c9ac15, type: 2}
   - {fileID: 11400000, guid: 9b6df29d58163914e92f5845bc749587, type: 2}

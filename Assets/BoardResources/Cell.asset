@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 4efb15d717d42d84faf8b734aa2abbe2, type: 3}
   m_Name: Cell
-  m_EditorClassIdentifier: Assembly-CSharp::ElementConfig
+  m_EditorClassIdentifier: 
   View: {fileID: 8281416630405570673, guid: 93f679a3b9c61404081d7327a9a4c129, type: 3}
