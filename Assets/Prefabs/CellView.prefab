@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8989729968959786799}
   - component: {fileID: 7817993944565282884}
+  - component: {fileID: 3076103797671420060}
   m_Layer: 0
   m_Name: CellView
   m_TagString: Untagged
@@ -80,3 +81,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3076103797671420060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8281416630405570673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47c25c7e61abee44abf7b3ffd62ae71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpriteRenderer: {fileID: 7817993944565282884}

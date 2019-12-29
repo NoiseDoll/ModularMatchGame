@@ -27,5 +27,6 @@ public class BonusConfig : ItemConfig
         new Vector2Int(-1, 1),
         new Vector2Int(1, -1),
         Vector2Int.one,
+        Vector2Int.zero,
     };
 }

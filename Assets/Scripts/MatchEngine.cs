@@ -19,7 +19,6 @@ public class MatchEngine : MonoBehaviour
     private MoveItemsSystem mover;
     private VisualizerSystem visualizer;
 
-
     void Awake()
     {
         board = new Board();
@@ -27,20 +26,17 @@ public class MatchEngine : MonoBehaviour
         spawner = new SpawnSystem();
         mover = new MoveItemsSystem();
 
-        visualizer = new VisualizerSystem();
+        StartCoroutine(StartGameDelayed());
+    }
+
+    private IEnumerator StartGameDelayed()
+    {
+        yield return new WaitForSeconds(0.5f);
 
         loader.Execute(board);
+        visualizer = new VisualizerSystem(board);
+
         MainLoop();
-    }
-
-    private void OnEnable()
-    {
-        inputPanel.Clicked += InputPanel_Clicked;
-    }
-
-    private void OnDisable()
-    {
-        inputPanel.Clicked -= InputPanel_Clicked;
     }
 
     private void InputPanel_Clicked(UnityEngine.EventSystems.PointerEventData obj)
@@ -62,5 +58,15 @@ public class MatchEngine : MonoBehaviour
         } while (isSpawned || isMoved);
 
         visualizer.Execute(board);
+    }
+
+    private void OnEnable()
+    {
+        inputPanel.Clicked += InputPanel_Clicked;
+    }
+
+    private void OnDisable()
+    {
+        inputPanel.Clicked -= InputPanel_Clicked;
     }
 }

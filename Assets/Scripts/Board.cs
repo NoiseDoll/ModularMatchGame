@@ -14,7 +14,7 @@ public class Board
     public Spawner[,] Spawners;
     public Item[,] Items;
 
-    public Queue<BoardCommand> CommandQueue;
+    public Queue<BoardCommandBase> CommandQueue;
 
     public void Create(int width, int height)
     {
@@ -26,7 +26,7 @@ public class Board
 
         ItemKinds = new List<MarbleConfig>();
 
-        CommandQueue = new Queue<BoardCommand>();
+        CommandQueue = new Queue<BoardCommandBase>();
     }
 
     public void SpawnCell(Cell cell)
@@ -48,10 +48,10 @@ public class Board
     {
         var pos = element.Position;
         array[pos.x, pos.y] = element;
-        var command = new BoardCommand
+        var command = new SpawnCommand
         {
-            Operation = "Spawn",
             Element = element,
+            SpawnPosition = pos,
         };
         CommandQueue.Enqueue(command);
     }
@@ -64,10 +64,11 @@ public class Board
         Items[pos.x, pos.y] = null;
         Items[newPos.x, newPos.y] = item;
 
-        var command = new BoardCommand
+        var command = new MoveCommand
         {
-            Operation = "Move",
             Element = item,
+            FromPosition = pos,
+            ToPosition = newPos,
         };
         CommandQueue.Enqueue(command);
     }
@@ -82,16 +83,18 @@ public class Board
         Items[pos2.x, pos2.y] = item1;
         Items[pos1.x, pos1.y] = item2;
 
-        var command = new BoardCommand
+        var command = new MoveCommand
         {
-            Operation = "Move",
             Element = item1,
+            FromPosition = pos1,
+            ToPosition = pos2,
         };
         CommandQueue.Enqueue(command);
-        command = new BoardCommand
+        command = new MoveCommand
         {
-            Operation = "Move",
             Element = item2,
+            FromPosition = pos2,
+            ToPosition = pos1,
         };
         CommandQueue.Enqueue(command);
     }
@@ -101,9 +104,8 @@ public class Board
         var item = Items[pos.x, pos.y];
         Items[pos.x, pos.y] = null;
 
-        var command = new BoardCommand
+        var command = new DespawnCommand
         {
-            Operation = "Despawn",
             Element = item,
         };
         CommandQueue.Enqueue(command);
@@ -133,10 +135,4 @@ public class Spawner : BoardElement
 public class Item : BoardElement
 {
     public ItemConfig Kind => Config as ItemConfig;
-}
-
-public class BoardCommand
-{
-    public string Operation;
-    public BoardElement Element;
 }
